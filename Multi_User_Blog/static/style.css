@@ -1,0 +1,146 @@
+
+* {
+    font-family: 'Indie Flower', cursive;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+
+body {
+    width: 80%;
+    margin: auto;
+}
+
+.main-title {
+    font-size: 80px;
+    color: white;
+    text-shadow: 4px 4px 8px #800000;
+    margin-bottom: 0px;
+}
+
+.post-heading,
+.post-footing {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-title,
+.post-date,
+.post-author {
+    width: 33.33%;
+    text-align: left;
+}
+
+.post-like,
+.post-edit,
+.post-delete {
+    margin-right: 5px;
+    float: right;
+}
+
+.post-title {
+    font-size:30px;
+    text-shadow: 2px 2px 4px #800000;
+}
+
+.post-date,
+.post-author {
+  position: relative;
+  top: 16px;
+  height: 6px;
+  text-align: right;
+}
+
+.post-content {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.register {
+    font-size: 20px;
+}
+
+table {
+    margin-left: 35%;
+}
+
+h4 {
+    font-size:30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+input,
+textarea {
+    background-color: #800000;
+    font-size: 20px;
+    text-align: left;
+}
+
+#submit,
+#back {
+    text-align: center;
+    width: 100px;
+    margin: 10px auto;
+    font-size: 20px;
+}
+
+
+.function {
+    color: #800000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.comment {
+    width: 80vw;
+    font-size: 15px;
+}
+
+#submit_main {
+    width: 50px;
+    text-align: left;
+}
+
+.row {
+    height: 20px !important;
+}
+
+.comment-content {
+    text-align: left;
+    color: #800000;
+}
+
+.comment-author,
+.comment-date {
+    text-align: right;
+    color: #800000;
+}
+
+.comment-hr {
+    border-top: 1px solid #800000;
+}
+
+.separator {
+    border-top: 10px solid white;
+}
+
+.error_message {
+    color: red;
+}
+
+
+
+
+
+

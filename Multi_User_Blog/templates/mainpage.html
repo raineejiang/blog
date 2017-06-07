@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="register">
+        <a href="/blog/signup" class="function">
+            Signup
+        </a>
+        <a href="/blog/login" class="function">
+            Login
+        </a>
+        <a href="/blog/newpost" class="function">
+            Create Post
+        </a>
+        <a href="/blog/logout" class="function">
+            Logout
+        </a>
+    </div>
+    <br><br>
+    {% for b in blogs %}
+        {{b.render() | safe}}
+        <div class="post-footing pull-right">
+            <div class="post-edit">
+                <a href="/blog/editpost/{{b.key().id()}}" class="btn" role="button"> Edit </a>
+            </div>
+            <div class="post-delete">
+                <a href="/blog/deletepost/{{b.key().id()}}" class="btn" role="button"> Delete </a>
+            </div>
+            <div class="post-like">
+                <a href="/blog/likes/{{b.key().id()}}" class="btn" role="button"> Like </a>
+            </div>
+            <div class="post-like">
+                <a href="/blog/unlikes/{{b.key().id()}}" class="btn" role="button"> Unlike </a>
+            </div>
+        </div>
+        <div> {{error}} </div>
+        <br><br>
+        <form method="post" action="/blog/newcomment/{{b.key().id()}}">
+            <label>
+                <h5>Comment</h5>
+                <textarea class="comment" name="comment" rows="2"> {{comment}} </textarea>
+            </label>
+            <input id="submit" type="submit">
+        </form>
+        <br><br>
+        {% for c in Comments.all().ancestor(b) %}
+            {{c.render() | safe}}
+        {% endfor %}
+        <hr class="separator">
+        <br><br><br>
+    {% endfor %}
+{% endblock %}
+
+
+

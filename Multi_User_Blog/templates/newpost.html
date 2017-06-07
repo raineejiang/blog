@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Multi User Blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    </head>
+    <body>
+        <form method="post">
+            <label>
+                <h4>subject</h4>
+                <input type="text" name="subject" value="{{subject}}" size="70">
+            </label>
+            <label>
+                <h4>blog</h4>
+                <textarea name="blog" cols="70" rows="10"> {{blog}} </textarea>
+            </label>
+            <div class="error">{{error}}</div>
+            <input id="submit" type="submit" style="display: block">
+        </form>
+    </body>
+{% endblock %}
+
